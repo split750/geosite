@@ -11,8 +11,8 @@
     <meta name="description" content="Emerald - Single Page Portfolio HTML Theme">
     <meta name="author" content="D&amp;I">
     
-    <%= stylesheet_link_tag "normalize", "app", "style", "animate" %>
-    <%= javascript_include_tag "vendor/custom.modernizr", "scripts" %>
+    <%= stylesheet_link_tag "style", "animate" %>
+    <%= javascript_include_tag "scripts", "scripts-before-closing-body" %>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Open+Sans:400,300,700,600|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
@@ -63,22 +63,6 @@
     <!-- End Navigation for Smartphones -->
 
   <!-- Scripts -->
-  <script src="javascripts/scripts-before-closing-body.js"></script>
-
-  <script>
-    document.write('<script src=' +
-    ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
-    '.js><\/script>')
-  </script>
-
-  <%= javascript_include_tag  "all" %>
-
-  <script>
-    $(document).foundation();
-  </script>
-
-  <script type="text/javascript" src="//use.typekit.net/dum3ejy.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
