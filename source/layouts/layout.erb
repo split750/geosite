@@ -8,22 +8,62 @@
     
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= data.page.title || "Godefroy Le Merdy" %></title>
+    <meta name="description" content="Emerald - Single Page Portfolio HTML Theme">
+    <meta name="author" content="D&amp;I">
     
-    <%= stylesheet_link_tag "normalize", "app", "style" %>
-    <%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= stylesheet_link_tag "normalize", "app", "style", "animate" %>
+    <%= javascript_include_tag "vendor/custom.modernizr", "scripts" %>
 
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Open+Sans:400,300,700,600|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
   </head>
   
   <body class="<%= page_classes %>">
     
     <!-- Header Content -->
-    <!--<%= partial('header') %>-->
+    <%= partial('header') %>
     
     <%= yield %>
 
     <!-- Footer Content -->
-    <!--<%= partial('footer') %>-->
+    <%= partial('footer') %>
+
+    <!-- Go to Top Button -->
+    <a class="go-to-top" href="#"></a>
+    <!-- End Go to Top Button -->
+
+    <!-- Navigation for Smartphones -->
+    <div id="modal">
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="home-link">Home</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#about-us">About</a>
+          </li>
+          <li>
+            <a href="#news">News</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="close-nav">X Close Navigation</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End Navigation for Smartphones -->
+
+  <!-- Scripts -->
+  <script src="javascripts/scripts-before-closing-body.js"></script>
 
   <script>
     document.write('<script src=' +
